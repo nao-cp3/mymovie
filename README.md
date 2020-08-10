@@ -1,24 +1,32 @@
-# README
+# MyMovie DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+### Association
+- has_many :movies
+- has_many :comments
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## movieテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|text|null: false|
+|text|text|null: false|
+|category_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- has_many :comments
+- belongs_to_active_hash :category
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|movie_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :movie
+- belongs_to :user
