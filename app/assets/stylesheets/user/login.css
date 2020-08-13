@@ -1,0 +1,49 @@
+.form-main {
+  width: 100vw;
+  height: calc(100vh - 120px);
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: whitesmoke;
+  color: #333;
+  align-items: center;
+}
+
+.login-name {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+.field {
+  margin-top: 20px;
+}
+
+
+
+.reg-email {
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: teal;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.reg-facebook {
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: royalblue;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.reg-google {
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: coral;
+  padding: 10px;
+  color: white;
+}
